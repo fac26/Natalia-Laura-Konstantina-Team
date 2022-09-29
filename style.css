@@ -1,63 +1,62 @@
 :root {
-  --team-border: blue;
-  --main-link-hover: red;
+  --team-border: #155048;
+  --main-link-hover: #7a2b52;
 }
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
+  font-family: 'Noto Sans', sans-serif;
 }
 /*section about*/
 
-
-#about{
-    height: 100vh;
-    position: relative;
-
+#about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('./img/general/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
+.about-info {
+  background: rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 7px #d6d6d6;
+  color: #000000;
+  padding: 8px 12px;
+  width: 50%;
+}
+
 /* Slideshow container */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.7;    
-  }  
-  .slideshow-container > *{
-    height: 100vh;
+.slideshow-container > * {
+  height: 100%;
+}
+.slide > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 10s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.7;
   }
-  .slide> img{
-    width: 100%;
-    height: 100%;
+  50% {
+    opacity: 1;
   }
-  /* Caption text */
-  .about-info {
-    color: #1d1c1c;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-    z-index: 5;
-    width: 50%;
-    
+  100% {
+    opacity: 0.7;
   }
- 
- 
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 10s;
-  }
-  
-  @keyframes fade {
-    0% {opacity: 0.4} 
-    50% {opacity: 0.7}
-    100%{opacity: 0.4}
-  }
- 
-  
+}
 /*end section about*/
+
 /*team*/
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -84,7 +83,7 @@ body {
 }
 #team .team-member:nth-child(odd) {
   align-self: flex-end;
-  border-right: 4px solid var(--team-border);
+  border-right: 0.5rem solid var(--team-border);
 }
 .team-member {
   padding: 2rem;
@@ -93,7 +92,7 @@ body {
   gap: 1rem;
 }
 .team-member:not(:nth-child(odd)) {
-  border-left: 4px solid var(--team-border);
+  border-left: 0.5rem solid var(--team-border);
 }
 .team-member .team-member--img {
   max-width: 30%;
@@ -124,4 +123,17 @@ footer {
 footer span {
   display: block;
   color: white;
+}
+/*end footer*/
+
+@media screen and (max-width: 768px) {
+  #about {
+    flex-direction: column-reverse;
+  }
+  .about-info {
+    width: 100%;
+  }
+  .slideshow-container {
+    width: 100vw;
+  }
 }
