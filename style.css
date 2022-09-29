@@ -1,13 +1,20 @@
-*{
-    box-sizing: border-box;
+:root {
+  --team-border: blue;
+  --main-link-hover: red;
 }
-body{
-    margin: 0;
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
 }
 /*section about*/
+
+
 #about{
     height: 100vh;
     position: relative;
+
 }
 /* Slideshow container */
 .slideshow-container {
@@ -51,14 +58,70 @@ body{
  
   
 /*end section about*/
+/*team*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+#team {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: flex-start;
+}
+#team > h2 {
+  width: 100%;
+}
+#team > * + * {
+  max-width: 80%;
+  width: 600px;
+}
+#team .team-member:nth-child(odd) {
+  align-self: flex-end;
+  border-right: 4px solid var(--team-border);
+}
+.team-member {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.team-member:not(:nth-child(odd)) {
+  border-left: 4px solid var(--team-border);
+}
+.team-member .team-member--img {
+  max-width: 30%;
+}
+.team-member .team-member--img img {
+  width: 100%;
+  border-radius: 50%;
+}
+.team-member-repos {
+  list-style: none;
+  padding: 0;
+}
+.team-member-repos > * {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.team-member-repos > * > a:hover {
+  color: var(--main-link-hover);
+}
+/*end team*/
 
 /*footer*/
 footer {
-    background-color: #2d3037;
-    text-align: center;
-    padding: 20px;
-  }
-  footer span {
-    display: block;
-    color: white;
-  }
+  background-color: #2d3037;
+  text-align: center;
+  padding: 20px;
+}
+footer span {
+  display: block;
+  color: white;
+}
