@@ -244,7 +244,9 @@ button:hover {
 
 /*end contact us form */
 
-
+.hidden{
+  display: none;
+}
 
 
 

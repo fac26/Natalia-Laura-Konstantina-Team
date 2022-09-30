@@ -8,14 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script src="./scripts/slideshow.js" defer></script>
     <script src="./index.js" defer></script>
+    <script src="./scripts/display_nav.js" defer></script>
     <title>Natalia-Laura-Konstantina-Team</title>
   </head>
   <body>
     <header>
+      <div class='nav-icon-mob hidden'>X</div>
       <a href="#about"
         ><img src="./img/logo/logo-temp.png" alt="NLT team logo"
       /></a>
-      <nav role="navigation" class="nav-bar">
+      <nav role="navigation" class="nav-bar" data-mob="">
         <ul class="nav-bar--menu">
           <li><a href="#about">Home</a></li>
           <li><a href="#team">Our team</a></li>
