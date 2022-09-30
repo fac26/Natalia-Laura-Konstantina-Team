@@ -183,7 +183,9 @@ button:hover {
 .hidden{
   display: none;
 }
-
+.active{
+  color: var(--main-link-hover);
+}
 
 @media screen and (max-width: 768px) {
   #about {
