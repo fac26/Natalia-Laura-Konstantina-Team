@@ -21,7 +21,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('./img/general/bg.png');
+  background: url('./img/general/bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -117,6 +117,9 @@ h2 {
 .team-member-repos > * > a:hover {
   color: var(--main-link-hover);
 }
+.team-member-repos img{
+  width: 70px;
+}
 /*end team*/
 
 /*footer*/
@@ -181,12 +184,7 @@ button {
 button:hover {
   background-color: hsl(220, 20%, 90%);
 }
-
-
-
 /*end contact us form */
-
-
 
 /*contact us form*/
 
@@ -247,8 +245,6 @@ button:hover {
 .hidden{
   display: none;
 }
-
-
 
 @media screen and (max-width: 768px) {
   #about {
