@@ -125,6 +125,63 @@ footer span {
   color: white;
 }
 /*end footer*/
+/*contact us form*/
+
+label,
+input,
+button,
+textarea {
+  display: block;
+  font: inherit;
+  color: inherit;
+}
+
+input,
+textarea,
+fieldset,
+button {
+  width: 100%;
+  border: 1px solid hsl(220, 10%, 75%);
+}
+
+textarea {
+  resize: vertical;
+}
+
+form {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto; 
+  max-width:60vw;
+  padding: 30px;
+  background-color: #52ab98;
+  color: white;
+}
+
+input,
+textarea {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.5rem;
+}
+
+button {
+  margin-top: 3rem;
+  padding: 0.75rem 0.5rem;
+  background-color: hsl(220, 20%, 96%);
+  transition: background-color 0.2s;
+  color: black;
+}
+
+button:hover {
+  background-color: hsl(220, 20%, 90%);
+}
+
+
+
+/*end contact us form */
+
+
 
 @media screen and (max-width: 768px) {
   #about {
