@@ -18,12 +18,15 @@ const showHideMenuHandler = (ev) => {
 
 const addMobVersListeners = () => {
   navIconMobile.classList.remove('hidden');
+  navItemsUlEl.classList.add('hidden');
+  navBar.classList.add('backdrop-menu');
   for (const item of navLinkEls) {
     item.addEventListener('click', showHideMenuHandler);
   }
 };
 
 const removeMobVersListeners = () => {
+  navBar.classList.remove('backdrop-menu');
   navIconMobile.classList.add('hidden');
   navItemsUlEl.classList.remove('hidden');//in case they are hidden
   for (const item of navLinkEls) {

@@ -1,5 +1,6 @@
 :root {
-  --team-border: #155048;
+  --light-green: #52ab98;
+  --dark-green: #155048;
   --main-link-hover: #7a2b52;
 }
 * {
@@ -11,14 +12,70 @@ body {
 }
 
 h2 {
- text-align: center;
- color: #2b6767;
+  text-align: center;
+  color: #2b6767;
+}
+section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 /*header*/
-
+header {
+  position: fixed;
+  height: 4rem;
+  padding: 0 2rem;
+  z-index: 100;
+  width: 100vw;
+  background-color: var(--light-green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--dark-green);
+  box-shadow: inset 0 -2rem 3rem rgb(0 0 0 / 10%),
+    3rem 0rem 2em rgb(0 0 0 / 40%);
+}
+header img {
+  width: 100px;
+  display: block;
+}
+.backdrop-menu {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  background: var(--dark-green);
+}
+.backdrop-menu > .nav-bar--menu {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+.backdrop-menu .nav-bar--menu > * {
+  padding: 0 2rem;
+  line-height: 3rem;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+.nav-bar--menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.nav-bar--menu a {
+  color: white;
+  text-decoration: none;
+}
+.nav-bar--menu a:hover {
+  border-bottom: 2px solid white;
+}
 .nav-icon-mob {
   width: 2rem;
-  position: absolute;
   z-index: 6;
   top: 1rem;
   left: 1rem;
@@ -32,7 +89,6 @@ h2 {
 /*end header*/
 
 /*section about*/
-
 #about {
   height: 100vh;
   display: flex;
@@ -105,7 +161,7 @@ h2 {
 }
 #team .team-member:nth-child(odd) {
   align-self: flex-end;
-  border-right: 0.5rem solid var(--team-border);
+  border-right: 0.5rem solid var(--dark-green);
 }
 .team-member {
   padding: 2rem;
@@ -134,7 +190,7 @@ h2 {
 .team-member-repos > * > a:hover {
   color: var(--main-link-hover);
 }
-.team-member-repos img{
+.team-member-repos img {
   width: 70px;
 }
 /*end team*/
@@ -177,8 +233,8 @@ form {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   margin-left: auto;
-  margin-right: auto; 
-  max-width:60vw;
+  margin-right: auto;
+  max-width: 60vw;
   padding: 30px;
   background-color: #52ab98;
   color: white;
@@ -230,8 +286,8 @@ form {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   margin-left: auto;
-  margin-right: auto; 
-  max-width:60vw;
+  margin-right: auto;
+  max-width: 60vw;
   padding: 30px;
   background-color: #52ab98;
   color: white;
@@ -255,11 +311,9 @@ button:hover {
   background-color: hsl(220, 20%, 90%);
 }
 
-
-
 /*end contact us form */
 
-.hidden{
+.hidden {
   display: none;
 }
 
