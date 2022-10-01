@@ -5,6 +5,15 @@ const navBar = document.querySelector('.nav-bar');
 
 const showHideMenuHandler = (ev) => {
   navItemsUlEl.classList.toggle('hidden');
+  if (navItemsUlEl.classList.contains('hidden')) {//span width style as open or closed
+    navIconMobile
+      .querySelectorAll(':nth-child(odd)')//Odd and even are keywords that can be used to match child elements whose index is odd or even
+      .forEach((el) => (el.style.width = '100%'));//css styling navbar in mobile version
+  } else {
+    navIconMobile
+      .querySelectorAll(':nth-child(odd)')
+      .forEach((el) => (el.style.width = '50%'));
+  }
 };
 
 const addMobVersListeners = () => {
