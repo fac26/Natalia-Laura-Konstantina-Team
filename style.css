@@ -9,6 +9,11 @@ body {
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
 }
+
+h2 {
+ text-align: center;
+ color: #2b6767;
+}
 /*section about*/
 
 #about {
@@ -16,7 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('./img/general/bg.png');
+  background: url('./img/general/bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -112,6 +117,9 @@ body {
 .team-member-repos > * > a:hover {
   color: var(--main-link-hover);
 }
+.team-member-repos img{
+  width: 70px;
+}
 /*end team*/
 
 /*footer*/
@@ -176,16 +184,16 @@ button {
 button:hover {
   background-color: hsl(220, 20%, 90%);
 }
-
-
-
 /*end contact us form */
+<<<<<<< HEAD
 .hidden{
   display: none;
 }
 .active{
   color: var(--main-link-hover);
 }
+=======
+>>>>>>> main
 
 @media screen and (max-width: 768px) {
   #about {
