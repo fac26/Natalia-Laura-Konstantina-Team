@@ -1,5 +1,6 @@
 :root {
-  --team-border: #155048;
+  --light-green: #52ab98;
+  --dark-green: #155048;
   --main-link-hover: #7a2b52;
 }
 * {
@@ -19,7 +20,47 @@ section{
   margin-left: auto;
   margin-right: auto;
 }
+ul{
+  list-style: none;
+}
+/*header*/
+header{
+  position: fixed;
+  height: 4rem;
+  padding: 0 2rem;
+  z-index: 100;
+  width: 100vw;
+  background-color: var(--light-green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--dark-green);
+  box-shadow: inset 0 -2rem 3rem rgb(0 0 0 / 10%), 3rem 0rem 2em rgb(0 0 0 / 40%);
+}
+header img{
+  width: 100px;
+}
+.backdrop-menu{
+  position: absolute;
+  top:4rem;
 
+}
+.backdrop-menu>.nav-bar--menu{
+  flex-direction: column;
+}
+.nav-bar--menu{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.nav-bar--menu a{
+  color: white;
+  text-decoration: none;
+}
+.nav-bar--menu a:hover{
+border-bottom: 2px solid white;
+}
+/*end header*/
 
 /*section about*/
 
@@ -83,7 +124,7 @@ section{
 }
 #team .team-member:nth-child(odd) {
   align-self: flex-end;
-  border-right: 0.5rem solid var(--team-border);
+  border-right: 0.5rem solid var(--dark-green);
 }
 .team-member {
   padding: 2rem;

@@ -4,8 +4,8 @@ const teamSection = document.querySelector('#team');
 const teamMembers = document.querySelectorAll('.team-member');
 const teamInfoEls=teamSection.querySelectorAll('.team-member--info');
 const gitReposEls=teamSection.querySelectorAll('.team-member-repos');
-
-
+let time=700;
+console.log(teamInfoEls, teamMembers)
 const addAnimation=(el, animation, await)=>{
   if(await){
     setTimeout(()=>{el.classList.add(animation);}, await); 
@@ -19,17 +19,21 @@ const removeAnimation=(el, animation)=>{
 
 
 const scrollToTeamHandler = () => {
-  let time=700;
+  
   for (let i=0; i<teamInfoEls.length; i++) { 
-    if(teamMembers[i].getBoundingClientRect().top < document.documentElement.scrollTop
-      && !teamInfoEls[i].classList.contains('animate-left-in')){
+    if(teamMembers[i].getBoundingClientRect().top < document.documentElement.scrollTop && !teamMembers[i].classList.contains('on-view')){
+    
       addAnimation(teamInfoEls[i],'animate-left-in', time);  
       addAnimation(gitReposEls[i], 'animate-in', 1000+time); 
       time+=700;
-      console.log(teamInfoEls[i].querySelector('h3'));
-      
+      teamMembers[i].classList.add('on-view');
+      console.log(teamMembers[i].getBoundingClientRect().top , teamMembers[i].querySelector('h3'));
+      console.log(document.documentElement.scrollTop);
+
+    
     } else if(teamMembers[i].getBoundingClientRect().top > document.documentElement.scrollTop){
       time=700;
+      teamMembers[i].classList.remove('on-view');
       if(teamInfoEls[i].classList.contains('animate-left-in')){
         console.log(teamInfoEls[i] , 'remove')
         removeAnimation(teamInfoEls[i],'animate-left-in');
