@@ -1,18 +1,46 @@
-
+const sections=document.querySelectorAll('section');
+const navTeamEl=document.querySelector('a[href="#team"]');
 const teamSection = document.querySelector('#team');
+const teamMembers = document.querySelectorAll('.team-member');
+const teamInfoEls=teamSection.querySelectorAll('.team-member--info');
+const gitReposEls=teamSection.querySelectorAll('.team-member-repos');
+
+
+const addAnimation=(el, animation, await)=>{
+  if(await){
+    setTimeout(()=>{el.classList.add(animation);}, await); 
+  } else{
+    el.classList.add(animation);
+  } 
+}
+const removeAnimation=(el, animation)=>{  
+    el.classList.remove(animation);  
+}
+
 
 const scrollToTeamHandler = () => {
-  const currentScrollPosition = document.documentElement.scrollTop;//Element.scrollTop property gets or sets the number of pixels that an element's content is scrolled vertically
-  const teamSectionTop = teamSection.offsetTop; /*-100=> to start display earlier*/
-  const teamSectionHeight = teamSection.offsetHeight;  
-    if (
-      currentScrollPosition >= teamSectionTop &&
-      currentScrollPosition <= teamSectionTop + teamSectionHeight
-    ) {
-        //el.style.animation = 'right-slide-in 1s ease-out forwards';
-  };
-};
-
-
+  let time=700;
+  for (let i=0; i<teamInfoEls.length; i++) { 
+    if(teamMembers[i].getBoundingClientRect().top < document.documentElement.scrollTop
+      && !teamInfoEls[i].classList.contains('animate-left-in')){
+      addAnimation(teamInfoEls[i],'animate-left-in', time);  
+      addAnimation(gitReposEls[i], 'animate-in', 1000+time); 
+      time+=700;
+      console.log(teamInfoEls[i].querySelector('h3'));
+      
+    } else if(teamMembers[i].getBoundingClientRect().top > document.documentElement.scrollTop){
+      time=700;
+      if(teamInfoEls[i].classList.contains('animate-left-in')){
+        console.log(teamInfoEls[i] , 'remove')
+        removeAnimation(teamInfoEls[i],'animate-left-in');
+        removeAnimation(gitReposEls[i], 'animate-in');
+      }      
+      
+    }
+  }
+    
+}
 
 window.addEventListener('scroll', scrollToTeamHandler);
+
+

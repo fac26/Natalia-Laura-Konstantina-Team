@@ -14,6 +14,13 @@ h2 {
  text-align: center;
  color: #2b6767;
 }
+section{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 /*section about*/
 
 #about {
@@ -49,17 +56,6 @@ h2 {
   animation-duration: 10s;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.7;
-  }
-}
 /*end section about*/
 
 /*team*/
@@ -74,7 +70,6 @@ h2 {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 2rem;
-  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   align-items: flex-start;
@@ -84,7 +79,7 @@ h2 {
 }
 #team > * + * {
   max-width: 80%;
-  width: 600px;
+  width: 800px;
 }
 #team .team-member:nth-child(odd) {
   align-self: flex-end;
@@ -93,30 +88,34 @@ h2 {
 .team-member {
   padding: 2rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
+}
+.team-member--info{
+  width: 70%;
+  display: none;
+  flex-direction: column;
+  opacity: 1;
+}
+
+
+.team-member-repos{
+  opacity: 0;
+  align-self: flex-end;
 }
 .team-member:not(:nth-child(odd)) {
   border-left: 0.5rem solid var(--team-border);
 }
 .team-member .team-member--img {
-  max-width: 30%;
+  max-width: 200px;
+  width: 30%;
 }
 .team-member .team-member--img img {
   width: 100%;
   border-radius: 50%;
 }
-.team-member-repos {
-  list-style: none;
-  padding: 0;
-}
-.team-member-repos > * {
-  display: inline-block;
-  margin-right: 1rem;
-}
-.team-member-repos > * > a:hover {
-  color: var(--main-link-hover);
-}
+
 .team-member-repos img{
   width: 70px;
 }
@@ -185,15 +184,74 @@ button:hover {
   background-color: hsl(220, 20%, 90%);
 }
 /*end contact us form */
-<<<<<<< HEAD
+
 .hidden{
   display: none;
 }
 .active{
   color: var(--main-link-hover);
 }
-=======
->>>>>>> main
+/*animation*/
+.animate-in{
+  opacity: 1;
+  animation: slide-in 1s ease-in;
+}
+.animate-left-in {
+  display: flex;
+  animation: left-slide-in 1s ease-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+} 
+
+@keyframes left-slide-in {
+  from {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes right-slide-in {
+  from {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes updown-slide-in {
+  from {
+    transform: translateY(15rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*end animation*/
 
 @media screen and (max-width: 768px) {
   #about {
