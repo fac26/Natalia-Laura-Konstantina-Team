@@ -44,24 +44,6 @@ header img {
   width: 100px;
   display: block;
 }
-.backdrop-menu {
-  position: absolute;
-  top: 4rem;
-  left: 0;
-  background: var(--dark-green);
-}
-.backdrop-menu > .nav-bar--menu {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-}
-.backdrop-menu .nav-bar--menu > * {
-  padding: 0 2rem;
-  line-height: 3rem;
-  justify-content: center;
-  width: 100%;
-  border-bottom: 2px solid black;
-}
 .nav-bar--menu {
   display: flex;
   gap: 1rem;
@@ -74,17 +56,8 @@ header img {
 .nav-bar--menu a:hover {
   border-bottom: 2px solid white;
 }
-.nav-icon-mob {
-  width: 2rem;
-  z-index: 6;
-  top: 1rem;
-  left: 1rem;
-}
-.nav-icon-mob span {
-  height: 0.2rem;
-  background-color: black;
-  margin: 0.2rem 0;
-  display: block;
+.nav-icon-mob{
+  display: none;
 }
 /*end header*/
 
@@ -315,6 +288,47 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.expanded-menu>*:nth-child(odd){
+  width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-icon-mob{
+    display: block;
+  }
+  .nav-icon-mob {
+    width: 2rem;
+    z-index: 6;
+    top: 1rem;
+    left: 1rem;
+  }
+  .nav-icon-mob span {
+    height: 0.2rem;
+    background-color: black;
+    margin: 0.2rem 0;
+    display: block;
+  }
+  .nav-bar {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    background: var(--dark-green);
+  }
+  .nav-bar--menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+ .nav-bar--menu > * {
+    padding: 0 2rem;
+    line-height: 3rem;
+    width: 100%;
+    justify-content: center;    
+    border-bottom: 2px solid black;
+  }  
+
 }
 
 @media screen and (max-width: 768px) {
