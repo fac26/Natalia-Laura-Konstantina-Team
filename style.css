@@ -108,6 +108,7 @@ header img {
   margin-left: auto;
   margin-right: auto;
   align-items: flex-start;
+ 
 }
 #team > h2 {
   width: 100%;
@@ -116,16 +117,19 @@ header img {
   max-width: 80%;
   width: 800px;
 }
-#team .team-member:nth-child(odd) {
-  align-self: flex-end;
-  border-right: 0.5rem solid var(--dark-green);
-}
+
 .team-member {
   padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  border-left: 0.5rem solid var(--dark-green);
+}
+.team-member:nth-child(odd) {
+  align-self: flex-end;
+  border-right: 0.5rem solid var(--dark-green);
+  border-left: 0;
 }
 .team-member--info{
   width: 70%;
@@ -134,7 +138,7 @@ header img {
   opacity: 1;
 }
 
-.stack-sm>*+*{
+.stack-sm>*{
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
 }
@@ -149,12 +153,10 @@ header img {
   opacity: 0;
   align-self: flex-end;
 }
-.team-member:not(:nth-child(odd)) {
-  border-left: 0.5rem solid var(--team-border);
-}
+
+
 .team-member .team-member--img {
-  max-width: 200px;
-  width: 30%;
+  width: 200px;
 }
 .team-member .team-member--img img {
   width: 100%;
@@ -304,6 +306,12 @@ footer span {
   }
 }
 /*end animation*/
+@media screen and (max-width: 480px) {
+
+#team > * + * {
+  max-width: 100%;
+}
+}
 
 
 @media screen and (max-width: 600px) {
@@ -352,5 +360,8 @@ footer span {
   }
   .slideshow-container {
     width: 100vw;
+  }
+  .team-member{
+    flex-direction: column;
   }
 }
