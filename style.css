@@ -134,7 +134,17 @@ header img {
   opacity: 1;
 }
 
-
+.stack-sm>*+*{
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.stack-sm>:first-child{
+  margin-bottom: 0.1rem;
+}
+.team-member--about{
+  opacity: 0.7;
+  font-style: italic;
+}
 .team-member-repos{
   opacity: 0;
   align-self: flex-end;
