@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />   
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="./scripts/team.js" defer></script>
     <script src="./scripts/slideshow.js" defer></script>
     <script src="./index.js" defer></script>
+    <script src="./scripts/display_nav.js" defer></script>
     <title>Natalia-Laura-Konstantina-Team</title>
   </head>
   <body>
     <header>
+      <div class='nav-icon-mob' role="button" aria-label="expand menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <a href="#about"
         ><img src="./img/logo/logo-temp.webp" alt="NLT team logo"
       /></a>
@@ -60,40 +68,33 @@
           <div class="team-member--img">
             <img src="./img/profile/profile.jpg" alt="" />
           </div>
-          <div class="team-member--info">
-            <h3>Full Name</h3>
+          <div class="team-member--info stack-sm">
+            <h3>Laura</h3>
             <p>more info here</p>
-            <ul class="team-member-repos">
-              <li><a href="https://github.com/" target="_blank"><img src="./img/profile/GitHub.webp" alt="github logo, link to personal github profile"></a></li>
-              <li><a href="https://www.linkedin.com/in/" target="_blank"><img src="./img/profile/in.webp" alt="linkedin logo, link to personal linkedin profile"></a></li>
-            </ul>
           </div>
+          <div class="team-member-repos"><a href="https://github.com/" target="_blank"><img src="./img/profile/GitHub.webp" alt="github logo, link to personal github profile"></a></div>
         </div>
         <div class="card team-member">
           <div class="team-member--img">
             <img src="./img/profile/profile.jpg" alt="" />
           </div>
-          <div class="team-member--info">
-            <h3>Full Name</h3>
+          <div class="team-member--info stack-sm">
+            <h3>Konstantina</h3>
             <p>more info here</p>
-            <ul class="team-member-repos">
-              <li><a href="https://github.com/" target="_blank"><img src="./img/profile/GitHub.webp" alt="github logo, link to personal github profile"></a></li>
-              <li><a href="https://www.linkedin.com/" target="_blank"><img src="./img/profile/in.webp" alt="linkedin logo, link to personal linkedin profile"></a></li>
-            </ul>
           </div>
+          <div class="team-member-repos"><a href="https://github.com/" target="_blank"><img src="./img/profile/GitHub.webp" alt="github logo, link to personal github profile"></a></div>
         </div>
         <div class="card team-member">
           <div class="team-member--img">
-            <img src="./img/profile/NR.webp" alt="Natalia Rusu, a team member of NLKcoders profile photo" />
+            <img src="./img/profile/NR.jpg" alt="Natalia Rusu, a team member of NLKcoders profile photo" />
           </div>
-          <div class="team-member--info">
+          <div class="team-member--info stack-sm">
             <h3>Natalia Rusu</h3>
-            <p>more info here</p>
-            <ul class="team-member-repos">
-              <li><a href="https://github.com/nataliarusu" target="_blank"><img src="./img/profile/GitHub.webp" alt="github logo, link to personal github profile"></a></li>
-              <li><a href="https://www.linkedin.com/in/natalia-rusu-sd/" target="_blank"><img src="./img/profile/in.webp" alt="linkedin logo, link to personal linkedin profile"></a></li>
-            </ul>
-          </div>
+            <p class="team-member--about">Software developer with backroung in bookkeeping</p>
+            <q>Every great piece of software starts with a customer's big idea. I love coding and do my best our clients are happy</q> 
+          </div>          
+            <div class="team-member-repos"><a href="https://github.com/nataliarusu" target="_blank"><img src="./img/profile/GitHub.webp" alt="github logo, link to personal github profile"></a></div>
+          
         </div>
       </section>
       <section id="contact">
