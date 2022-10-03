@@ -98,27 +98,34 @@
         </div>
       </section>
       <section id="contact">
-        <h2>Contact us</h2>
-        <form id="form">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" />
-          
+        <form name="contactForm" onsubmit="return validateMyForm();">
+          <h2>Contact us</h2>
+          <p style="text-align: center; margin: 2em;">
+            Got a question? We'd love to hear from you. Send us a message and
+            we'll respond as soon as possible.
+          </p>
+  
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" placeholder="Your Name" />
+  
           <label for="com">Company</label>
-          <input id="com" name="com" type="text" />
-          
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" />
-          
-          <label for="message">Message</label>
-          <textarea name="message"></textarea>
-          
-          <button type="submit">Submit</button>
-          </form>
+          <input id="com" name="com" type="text" placeholder="Company Name" />
+  
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" placeholder="Email address"/>
+  
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Your message..."></textarea>
+  
+          <p>* required fields</p>
+  
+          <input type="submit" value="Submit" name="submit-button" class="submit-button"/>
+        </form>
           </body>  
       </section>
     </main>
     <footer>
-      <span> Authors Laura , Konstantina , Natalia Rusu</span>
+      <span> Authors Laura Keating, Konstantina , Natalia Rusu</span>
       <span>Made with HTML, CSS and JavaScript</span>
       <span>2022</span>
     </footer>

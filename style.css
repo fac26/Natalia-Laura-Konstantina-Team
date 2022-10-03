@@ -10,10 +10,7 @@ body {
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
 }
-h2 {
-  text-align: center;
-  color: #2b6767;
-}
+
 section{
   max-width: 1200px;
   margin-left: auto;
@@ -176,8 +173,15 @@ footer {
 /*end team*/
 
 /*contact us form*/
+
 #contact {
  margin-top: 100px;
+}
+
+form > h2 {
+  color: white;
+  font-size: 2em;
+  text-align: center;
 }
 
 label,
@@ -187,12 +191,16 @@ textarea {
   display: block;
   font: inherit;
   color: inherit;
+  margin-top: 0.3em;
 }
 
+label {
+  margin-top: 0.8rem;
+}
 input,
 textarea,
-fieldset,
-button {
+fieldset
+ {
   width: 100%;
   border: 1px solid hsl(220, 10%, 75%);
 }
@@ -204,31 +212,31 @@ textarea {
 form {
   margin: 1.5rem auto;
   max-width:40vw;
-  padding: 40px;
+  padding: 2vw;
   background-color: #155048;
   color: white;
 }
 
 input,
 textarea {
-  margin-top: 0.5rem;
   padding: 0.5rem 0.5rem;
   color: black;
 }
 
 textarea {
-  min-height: 200px;
+  min-height: 160px;
 }
 
-button {
-  margin-top: 3rem;
+.submit-button {
+  margin-top: 1rem;
   padding: 0.75rem 0.5rem;
   background-color: hsl(220, 20%, 96%);
   transition: background-color 0.2s;
   color: black;
+  border: 1px solid hsl(220, 10%, 75%)
 }
 
-button:hover {
+.submit-button:hover {
   background-color: hsl(220, 20%, 90%);
 }
 /*end contact us form */
