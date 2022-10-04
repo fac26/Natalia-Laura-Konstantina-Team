@@ -7,12 +7,12 @@ function validateMyForm() {
     var validateEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; // Javascript reGex for email validation
     var validateText = /\d+$/g; // Javascript reGex for Name validation
 
-    if (name == '' || validateText.test(name)) {
+    if (name == '' || name.trim().length === 0 || validateText.test(name)) {
       window.alert('Please tell us your name');
       return false;
     }
 
-    if (companyName == '' || validateText.test(companyName)) {
+    if (companyName == '' || companyName.trim().length === 0 || validateText.test(companyName)) {
       window.alert('Please tell us your Company\'s name');
       return false;
     }
