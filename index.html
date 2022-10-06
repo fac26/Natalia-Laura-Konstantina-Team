@@ -76,7 +76,11 @@
           </div>
           <div class="team-member--info stack-sm">
             <h3>Laura</h3>
-            <p>more info here</p>
+            <p class="team-member--about">
+              Front end developer with a keen interest in architecture and design
+            </p>
+            <q>I have passion for helping others realise their ideas having honed this skill
+               working within the construction industry </q>
           </div>
           <div class="team-member-repos">
             <a href="https://github.com/" target="_blank"
@@ -132,7 +136,7 @@
         </div>
       </section>
       <section id="contact">
-        <form name="contactForm" onsubmit="return validateMyForm();">
+        <form id="contactForm" name="contactForm">
           <h2>Contact us</h2>
           <p style="text-align: center; margin: 2em">
             Got a question? We'd love to hear from you. Send us a message and
@@ -140,10 +144,10 @@
           </p>
 
           <label for="name">Name *</label>
-          <input id="name" name="name" type="text" placeholder="Your Name" />
+          <input id="name" name="name" type="text" placeholder="Your Name"/>
 
-          <label for="com">Company</label>
-          <input id="com" name="com" type="text" placeholder="Company Name" />
+          <label for="com">Company *</label>
+          <input id="com" name="com" type="text" placeholder="Company Name"/>
 
           <label for="email">Email *</label>
           <input
@@ -166,6 +170,7 @@
             type="submit"
             value="Submit"
             name="submit-button"
+            id="submit-button"
             class="submit-button"
           />
         </form>
