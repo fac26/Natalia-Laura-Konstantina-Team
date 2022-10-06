@@ -6,6 +6,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
@@ -266,11 +269,11 @@ footer span {
 /*animation*/
 .animate-in {
   opacity: 1;
-  animation: slide-in 1s ease-in;
+  animation: slide-in 1s linear;
 }
 .animate-left-in {
   display: flex;
-  animation: left-slide-in 1s ease-out;
+  animation: left-slide-in 1s linear;
 }
 
 @keyframes fade {
