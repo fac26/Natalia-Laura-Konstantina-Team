@@ -6,7 +6,6 @@ showSlides();
 function showSlides() {
   slideIndex++;
   for (i = 0; i < slides.length; i++) {
-    
     slides[i].classList.remove('fade');
     slides[i].style.display = 'none';
   }
